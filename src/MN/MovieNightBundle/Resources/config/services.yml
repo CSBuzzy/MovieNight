@@ -1,0 +1,4 @@
+services:
+#    mn_movie_night.example:
+#        class: MN\MovieNightBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

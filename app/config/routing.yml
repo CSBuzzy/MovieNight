@@ -1,3 +1,7 @@
+mn_movie_night:
+    resource: "@MNMovieNightBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

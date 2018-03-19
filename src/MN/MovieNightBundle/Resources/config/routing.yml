@@ -1,0 +1,3 @@
+mn_movie_night_homepage:
+    path:     /
+    defaults: { _controller: MNMovieNightBundle:Default:index }
