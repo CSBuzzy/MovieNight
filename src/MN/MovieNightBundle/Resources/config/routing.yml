@@ -1,3 +1,11 @@
+mn_movie_night_user:
+    resource: "@MNMovieNightBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+mn_movie_night_event:
+    resource: "@MNMovieNightBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+
 mn_movie_night_homepage:
     path:     /
     defaults: { _controller: MNMovieNightBundle:Default:index }

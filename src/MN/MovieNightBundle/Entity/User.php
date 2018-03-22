@@ -63,6 +63,10 @@ class User
      */
     private $city;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="user")
+     */
+    private $events;
 
     /**
      * Get id

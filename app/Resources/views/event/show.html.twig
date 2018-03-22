@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Event</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ event.id }}</td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td>{{ event.picture }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ event.title }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{% if event.type %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if event.date %}{{ event.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{% if event.time %}{{ event.time|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ event.description }}</td>
+            </tr>
+            <tr>
+                <th>Nbpeople</th>
+                <td>{{ event.nbPeople }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ event.address }}</td>
+            </tr>
+            <tr>
+                <th>Eventcity</th>
+                <td>{{ event.eventCity }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ event.category }}</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td>{{ event.language }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('event_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('event_edit', { 'id': event.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

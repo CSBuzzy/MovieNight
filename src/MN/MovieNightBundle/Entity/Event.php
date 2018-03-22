@@ -98,6 +98,10 @@ class Event
      */
     private $language;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="events")
+     */
+    private $user;
 
     /**
      * Get id
